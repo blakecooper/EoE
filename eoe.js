@@ -1,13 +1,7 @@
-<script>
-"use strict"
+//substrings to search for in page source
+let substrings = []
 
-let substrings = [
-  "<li class="current-page">",
-  "<div class="introtext text parbase section"><p>",
-  "srcset=",
-  "srcset=",
-  "<div class="calltoaction section">"
-]
+//EoE elements to populate from page source
 let eoeElements = [
   "Title not found",
   "Teaser not found",
@@ -16,6 +10,12 @@ let eoeElements = [
   "Link text not found"
 ]
 
+//Testing for correct path and functionality... this can come out!
+function test() {
+  document.getElementById('textArea').innerHTML = 'hiya buddy'
+}
+
+//Search page source to populate the elements correctly
 function getElements(source) {
   if(source != "") {
     for(let i = 0; i < 5; i++) {
@@ -26,9 +26,3 @@ function getElements(source) {
     }
   }
 }
-
-function test() {
-  document.getElementById('textArea').innerHTML = 'hiya buddy'
-}
-
-</script>
